@@ -1,0 +1,38 @@
+<br />  <br /> <br /> <br /> 
+  
+  <div class="d-flex h-100 text-center">
+
+    
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+  <main class="px-3">
+    <h1>Patients App</h1>
+    <p class="lead">
+        A Simple App where Doctors and Receptionists can add patients and their problems and can view them.
+        Only Doctors can edit and delete the patients.
+
+    
+    </p>
+    <p class="lead">
+        To get started, please sign up or sign in.    
+    </p>
+    <p class="lead">
+
+
+    <% if user_signed_in? %>
+    <%= link_to "View Patients", patients_path, class: "btn btn-lg btn-light fw-bold border-white bg-white"  %>
+      <% else %>
+
+
+      <%= link_to "Sign In", new_user_session_path, class: "btn btn-lg btn-light fw-bold border-white bg-white"  %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-light fw-bold border-white bg-white"  %>
+      <% end %>
+    </p>
+  </main>
+
+ 
+
+    
+
+</div>
+    </div>

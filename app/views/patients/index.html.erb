@@ -1,0 +1,45 @@
+<div class="mb-5">
+<div class="mx-3 float-start">
+<h1>Patients</h1>
+</div>
+
+<div class="float-end ">
+
+<%= link_to "New patient", new_patient_path, class:"mx-3 btn btn-secondary" %>
+</div>
+
+</div>
+
+<div class="mt-5">
+<div id="patients" class="container">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Problem</th>
+      <th scope="col">Created On</th>
+    </tr>
+  </thead>
+  <% @patients.each do |patient| %>
+    <tbody>
+    <tr>
+      <th scope="row">
+        <%= link_to patient.name, patient_path(patient) %>
+      </th>
+      <td>
+        <%= patient.email %>
+      </td>
+      <td>
+      <%= patient.problem %>
+      </td>
+      <td>
+        <%= patient.created_at.strftime("%B %d, %Y") %>
+      </td>
+    </tr>
+    </tbody>
+  <% end %>
+  </table>
+</div>
+
+</div>

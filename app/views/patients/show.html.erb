@@ -1,0 +1,18 @@
+<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div class="container-fluid py-5">
+        <h3 class="display-5 fw-bold">
+        
+        <%= @patient.name %> | <%= @patient.email %>
+        
+        </h3>
+        <p class="col-md-8 fs-4">
+        <%= @patient.problem %>
+        </p>
+        <%= link_to "Edit this patient", edit_patient_path(@patient), class:"btn btn-secondary btn-md" %>
+        <%= link_to "Back to patients", patients_path, class:"btn btn-secondary btn-md" %>
+
+        <br />
+        <%= button_to "Delete this patient", @patient, method: :delete, class:"mt-4 btn btn-danger btn-md" %>
+
+      </div>
+    </div>
